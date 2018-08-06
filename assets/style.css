@@ -4,6 +4,10 @@
     font-size: 20px;
 }
 
+body {
+    background-image: url("images/bananas.png")
+}
+
 label {
     font-family: 'Bungee', cursive;
     padding: 10px;
@@ -17,8 +21,28 @@ input {
 button {
     padding: 5px;
     margin: 5px;
+    background-color: rgb(162, 221, 44);
+    border-radius: 10px;
 }
 
 #add-meme {
     font-family: 'Racing Sans One', cursive;
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    img {
+        max-width: 90%;
+    }
 }

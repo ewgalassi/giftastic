@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var topics = ["doge", "but that's none of my business", "y u no", "futurama fry", "all the things"];
 
     function renderButtons() {
@@ -20,7 +20,7 @@ $(document).ready(function() {
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).then(function(response) {
+        }).then(function (response) {
             var results = response.data;
             for (item in results) {
                 var gifDiv = $("<div>");
@@ -39,14 +39,14 @@ $(document).ready(function() {
         });
     };
 
-    $("#add-meme").on("click", function(event) {
+    $("#add-meme").on("click", function (event) {
         event.preventDefault();
         var meme = $("#meme-input").val().trim();
         topics.push(meme);
         renderButtons();
     });
 
-    $(document).on("click", ".gif", function() {
+    $(document).on("click", ".gif", function () {
         var state = $(this).attr("data-state");
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
